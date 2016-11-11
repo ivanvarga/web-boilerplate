@@ -1,0 +1,24 @@
+{
+  "name": "web-boilerplate",
+  "description": "This is express boilerplate web app.",
+  "main": "app.js",
+  "authors": [
+    "Ivan Varga"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "express",
+    "node",
+    "docker",
+    "circleci"
+  ],
+  "homepage": "https://github.com/ivanvarga/web-boilerplate",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
