@@ -1,0 +1,28 @@
+{
+  "name": "web-boilerplate",
+  "version": "1.0.0",
+  "description": "This is express boilerplate web app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanvarga/web-boilerplate.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "docker",
+    "circleci"
+  ],
+  "author": "Ivan Varga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivanvarga/web-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ivanvarga/web-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
