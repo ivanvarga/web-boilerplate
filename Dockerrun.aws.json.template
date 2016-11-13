@@ -1,9 +1,5 @@
 {
   "AWSEBDockerrunVersion": "1",
-  "Authentication": {
-    "Bucket": "bellkev-shared",
-    "Key": "dockercfg"
-  },
   "Image": {
     "Name": "ivarga/web-boilerplate:<TAG>",
     "Update": "true"
