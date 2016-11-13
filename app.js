@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 /* eslint-disable no-console */
-app.listen(port, '0.0.0.0', 10, () => {
+app.listen(port, () => {
     console.log(`New server started on port:${port}`);
 });
 /* eslint-enable no-console */

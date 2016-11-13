@@ -6,11 +6,12 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-COPY public /usr/src/app/
-COPY src /usr/src/app/
+COPY public /usr/src/app/public
+COPY src /usr/src/app/src
 COPY app.js /usr/src/app/
 
 RUN npm install
 
 EXPOSE 5000
+
 CMD [ "npm", "start" ]
