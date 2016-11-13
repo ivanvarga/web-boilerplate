@@ -4,6 +4,7 @@ machine:
 
 dependencies:
   pre:
+    - aws configure set default.region us-west-2
     - docker build --rm=false -t ivanvarga/web-boilerplate:$CIRCLE_SHA1 .
 
 test:
