@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   pre:
-    - docker build -t ivanvarga/web-boilerplate:$CIRCLE_SHA1 .
+    - docker build --rm=false -t ivanvarga/web-boilerplate:$CIRCLE_SHA1 .
 
 test:
   post:
