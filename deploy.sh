@@ -4,7 +4,7 @@
 SHA1=$1
 
 # Deploy image to Docker Hub
-docker push ivanvarga/web-boilerpplate:$SHA1
+docker push ivanvarga/web-boilerplate:$SHA1
 
 # Create new Elastic Beanstalk version
 EB_BUCKET=web-boilerpplate
