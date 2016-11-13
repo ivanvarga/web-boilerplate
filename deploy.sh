@@ -7,7 +7,7 @@ SHA1=$1
 docker push ivanvarga/web-boilerplate:$SHA1
 
 # Create new Elastic Beanstalk version
-EB_BUCKET=web-boilerpplate
+EB_BUCKET=web-boilerplate
 DOCKERRUN_FILE=$SHA1-Dockerrun.aws.json
 
 sed "s/<TAG>/$SHA1/" < Dockerrun.aws.json.template > $DOCKERRUN_FILE
