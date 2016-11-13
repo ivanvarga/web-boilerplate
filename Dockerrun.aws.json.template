@@ -3,7 +3,7 @@
   "Authentication": {
     "Bucket": "web-boilerplate",
     "Key": "dockercfg"
-  }
+  },
   "Image": {
     "Name": "ivarga/web-boilerplate:<TAG>",
     "Update": "true"
