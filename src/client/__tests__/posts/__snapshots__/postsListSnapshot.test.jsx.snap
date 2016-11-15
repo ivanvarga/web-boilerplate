@@ -1,0 +1,19 @@
+exports[`test PostsList renders correctly 1`] = `
+<div>
+  <button
+    onClick={[Function]}>
+     New post
+  </button>
+  <ul>
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+    <div>
+      3
+    </div>
+  </ul>
+</div>
+`;

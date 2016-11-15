@@ -1,0 +1,16 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "watch": [
+	  "src/server",
+	  "src/client/public/bundle.js"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js, jsx, json, html, css"
+}
