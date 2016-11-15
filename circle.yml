@@ -11,14 +11,16 @@ dependencies:
     - docker pull ivanvarga/web-boilerplate:$CIRCLE_BRANCH || true
 
 test:
-  override:
+  pre:
     - docker build --rm=false -t ivanvarga/web-boilerplate:$CIRCLE_BRANCH .
-    - docker push ivanvarga/web-boilerplate:$CIRCLE_BRANCH
+
+  override:
+    - docker run -d -p 5000:5000  ivanvarga/web-boilerplate:$CIRCLE_BRANCH;
+    - curl --retry 30 --retry-delay 5 -v http://localhost:5000
 
   post:
-    - docker run -d -p 5000:5000  ivanvarga/web-boilerplate:$CIRCLE_BRANCH; sleep 10
-    - curl --retry 10 --retry-delay 5 -v http://localhost:5000
-
+    - docker push ivanvarga/web-boilerplate:$CIRCLE_BRANCH
+    
 deployment:
   elasticbeanstalk:
     branch: master
