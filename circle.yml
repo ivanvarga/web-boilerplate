@@ -12,7 +12,7 @@ dependencies:
 
 test:
   override:
-    - docker build -t ivanvarga/web-boilerplate:$CIRCLE_BRANCH .
+    - docker build --rm=false -t ivanvarga/web-boilerplate:$CIRCLE_BRANCH .
     - docker push ivanvarga/web-boilerplate:$CIRCLE_BRANCH
 
   post:
