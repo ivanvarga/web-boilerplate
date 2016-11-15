@@ -11233,7 +11233,7 @@ var PostsList = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (PostsList.__proto__ || Object.getPrototypeOf(PostsList)).call(this));
 
-    _this.state = { posts: [1, 2, 3] || props.posts };
+    _this.state = { posts: props.posts || [1, 2, 3] };
     _this.handleClick = _this.handleClick.bind(_this);
     return _this;
   }
