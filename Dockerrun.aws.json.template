@@ -5,7 +5,7 @@
     "Key": "dockercfg"
   },
   "Image": {
-    "Name": "ivanvarga/web-boilerplate:<TAG>",
+    "Name": "ivanvarga/web-boilerplate",
     "Update": "true"
   },
   "Ports": [
