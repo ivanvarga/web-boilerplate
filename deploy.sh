@@ -1,8 +1,9 @@
 # deploy.sh
 #! /bin/bash
 
-SHA1=$1
-BRANCH=$2
+BRANCH=$1
+SHA1=$2
+
 
 # Deploy image to Docker Hub
 #docker push ivanvarga/web-boilerplate:latest
