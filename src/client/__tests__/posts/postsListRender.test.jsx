@@ -18,7 +18,10 @@ test('PostsList renders posts within Posts ', () => {
   const list = mount(
     <PostsList posts={posts} />,
   );
-  expect(list.find(Post).length).toBe(posts.length);
+  const postCount = list.find(Post).length;
+
+  expect(postCount).toBe(posts.length);
+  expect(postCount).toBe(list.instance().getPostsCount());
 });
 
 test('PostsList renders one post more on AddPostButton click ', () => {
@@ -30,12 +33,13 @@ test('PostsList renders one post more on AddPostButton click ', () => {
 
   const addPostButoon = list.find(AddPostButton);
   let finalPostCount;
-
+  
   addPostButoon.simulate('click');
   finalPostCount = list.find(Post).length;
   expect(finalPostCount).toBe(initialPostCount + 1);
+  expect(finalPostCount).toBe(list.instance().getPostsCount());
   addPostButoon.simulate('click');
   finalPostCount = list.find(Post).length;
   expect(finalPostCount).toBe(initialPostCount + 2);
+  expect(finalPostCount).toBe(list.instance().getPostsCount());
 });
-

@@ -8,8 +8,6 @@ const app = express();
 
 const port = 5000;
 
-const favicon = require('serve-favicon');
-
 app.use('/', express.static(path.resolve(__dirname, '../client/public')));
 
 app.get('/', (req, res) => {

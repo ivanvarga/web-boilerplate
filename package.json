@@ -7,8 +7,9 @@
     "test": "jest",
     "build": "webpack",
     "start": "webpack && (nodemon src/server/app.js)",
-    "start-dev": "webpack && (nodemon src/server/app.js)",
-    "dev": "webpack-dev-server"
+    "backend:watch": "nodemon src/server/app.js",
+    "frontend:watch": "webpack-dev-server",
+    "dev": "npm run backend:watch || npm run frontend:watch"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,6 @@
     "react-router": "^3.0.0",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.2",
-    "serve-favicon": "^2.3.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.26"
   },
