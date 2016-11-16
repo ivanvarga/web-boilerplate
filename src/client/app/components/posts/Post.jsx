@@ -3,7 +3,7 @@
 import React from 'react';
 
 function Post(props) {
-  return (<div>{props.data}</div>);
+  return (<div >{props.data}</div>);
 }
 
 Post.propTypes = {
