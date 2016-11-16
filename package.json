@@ -9,7 +9,8 @@
     "start": "webpack && (nodemon src/server/app.js)",
     "backend:watch": "nodemon src/server/app.js",
     "frontend:watch": "webpack-dev-server",
-    "dev": "npm run backend:watch || npm run frontend:watch"
+    "dev": "npm run backend:watch || npm run frontend:watch",
+    "eslint": "eslint src"
   },
   "repository": {
     "type": "git",
