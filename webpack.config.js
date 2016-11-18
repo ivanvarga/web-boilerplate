@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 
 const BUILD_DIR = path.resolve(__dirname, 'src/client/public');
@@ -8,6 +7,7 @@ const config = {
   entry: [
     `${APP_DIR}/index.jsx`,
   ],
+  devServer: { inline: true, hot: true },
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',

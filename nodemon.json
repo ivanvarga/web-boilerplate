@@ -7,7 +7,7 @@
   "verbose": true,
   "watch": [
 	  "src/server",
-	  "src/client/public/bundle.js"
+	  "src/client/public/"
   ],
   "env": {
     "NODE_ENV": "development"

@@ -8,9 +8,9 @@
     "build": "webpack",
     "start": "webpack && (nodemon src/server/app.js)",
     "backend:watch": "nodemon src/server/app.js",
-    "frontend:watch": "webpack-dev-server",
-    "dev": "npm run backend:watch || npm run frontend:watch",
-    "eslint": "eslint src"
+    "frontend:watch": "webpack-dev-server --watch --hot --inline",
+    "dev": "(npm run frontend:watch) & (npm run backend:watch  -- development)",
+    "lint": "(eslint src) && (sass-lint src)"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,18 @@
     "docker",
     "circleci"
   ],
-  "author": "Ivan Varga",
+  "author": "Ivan Varga, Dino Koprivnjak",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ivanvarga/web-boilerplate/issues"
   },
   "homepage": "https://github.com/ivanvarga/web-boilerplate#readme",
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/client/__mocks__/allMock.js",
+      "\\.(css|less|scss)$": "<rootDir>/src/client/__mocks__/allMock.js"
+    }
+  },
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
@@ -62,6 +68,7 @@
     "react-addons-test-utils": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-test-renderer": "^15.3.2",
+    "sass-lint": "^1.10.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2",

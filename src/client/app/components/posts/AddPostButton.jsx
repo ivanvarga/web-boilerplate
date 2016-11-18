@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-
-
 class AddPostButton extends React.Component {
   constructor(props) {
     super();
